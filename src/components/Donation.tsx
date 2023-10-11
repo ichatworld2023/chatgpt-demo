@@ -54,7 +54,7 @@ export default () => {
         <div>
 
           <div mt-2 op-60>
-            感谢您的支持! <br />
+            感谢您的支持!<br />
             发送任意内容到 <a gpt-subtitle text-sm href="mailto:free2gpt@gmail.com">free2gpt@gmail.com</a> 可订阅最新地址<br />
             联系我们: <a gpt-subtitle text-sm href="mailto:free2gpt@gmail.com">free2gpt@gmail.com</a>
           </div>
