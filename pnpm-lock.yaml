@@ -12,8 +12,8 @@ dependencies:
     specifier: ^5.3.0
     version: 5.3.0(astro@2.7.0)
   '@astrojs/solid-js':
-    specifier: ^2.2.0
-    version: 2.2.0(@babel/core@7.23.0)(solid-js@1.7.6)(vite@4.4.11)
+    specifier: ^2.2.1
+    version: 2.2.1(@babel/core@7.23.0)(solid-js@1.7.6)(vite@4.4.11)
   '@astrojs/vercel':
     specifier: ^3.5.0
     version: 3.5.0(astro@2.7.0)(react@18.2.0)
@@ -199,8 +199,8 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/solid-js@2.2.0(@babel/core@7.23.0)(solid-js@1.7.6)(vite@4.4.11):
-    resolution: {integrity: sha512-yZcpwGnPnFsF74+9ppXBy/h3rAbrhNuRCz/pTck2KWufwsmn5SwUWTBWLGgSqK3dhaw56Mp2MMJQuLY3Nc5VMw==}
+  /@astrojs/solid-js@2.2.1(@babel/core@7.23.0)(solid-js@1.7.6)(vite@4.4.11):
+    resolution: {integrity: sha512-LJRKX1raHePOWE5lL7OjYvtap/S4fQoZLPB0pVw6RKUJtCeRIYD44x5DxFk52dFCkjnlVuWFlQkvtefT8kotcQ==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       solid-js: ^1.4.3
