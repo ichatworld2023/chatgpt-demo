@@ -1,13 +1,16 @@
 export const config = {
-  // Only run the middleware on the admin route
-  matcher: '/admin',
+  matcher: '/*',
 }
+
+const ALLOWED_COUNTRIES = ['CN', 'HK']
 
 export default function middleware(request) {
   const url = new URL(request.url)
 
-  if (url.pathname === '/admin')
-    url.pathname = '/redirected'
+  const country = request.geo.country || 'CN'
+
+  if (!ALLOWED_COUNTRIES.includes(country))
+    url.pathname = '/blocked'
 
   return Response.redirect(url)
 }
