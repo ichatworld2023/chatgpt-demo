@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -17,9 +17,6 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^3.5.0
     version: 3.5.0(astro@2.7.0)(react@18.2.0)
-  '@vercel/kv':
-    specifier: ^0.2.2
-    version: 0.2.2
   astro:
     specifier: ^2.7.0
     version: 2.7.0
@@ -81,7 +78,7 @@ devDependencies:
     version: 2.3.0
   unocss:
     specifier: ^0.50.8
-    version: 0.50.8(postcss@8.4.31)(rollup@2.79.1)(vite@4.3.9)
+    version: 0.50.8(postcss@8.4.24)(rollup@2.79.1)(vite@4.3.9)
 
 packages:
 
@@ -559,7 +556,6 @@ packages:
   /@babel/plugin-proposal-unicode-property-regex@7.18.6(@babel/core@7.22.5):
     resolution: {integrity: sha512-2BShG/d5yoZyXZfVePH91urL5wTG6ASZU9M4o03lKK8u8UW1y08OMttBSOADTcJrnPMpvDXRG3G8fyLh4ovs8w==}
     engines: {node: '>=4'}
-    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -2288,7 +2284,7 @@ packages:
       sirv: 2.0.3
     dev: true
 
-  /@unocss/postcss@0.50.8(postcss@8.4.31):
+  /@unocss/postcss@0.50.8(postcss@8.4.24):
     resolution: {integrity: sha512-UbFD+25EkmBonZggKuQdunAU+1O6O83NcnMqSalhn4vhsr4yHeD4P+Omr+CnBcuOxkP4h2JYHzfzdpe4DZxKYg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2299,7 +2295,7 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.2.12
       magic-string: 0.30.0
-      postcss: 8.4.31
+      postcss: 8.4.24
     dev: true
 
   /@unocss/preset-attributify@0.50.8:
@@ -2418,29 +2414,12 @@ packages:
       - rollup
     dev: true
 
-  /@upstash/redis@1.21.0:
-    resolution: {integrity: sha512-c6M+cl0LOgGK/7Gp6ooMkIZ1IDAJs8zFR+REPkoSkAq38o7CWFX5FYwYEqGZ6wJpUGBuEOr/7hTmippXGgL25A==}
-    dependencies:
-      isomorphic-fetch: 3.0.0
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
   /@vercel/analytics@0.1.11(react@18.2.0):
     resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
     peerDependencies:
       react: ^16.8||^17||^18
     dependencies:
       react: 18.2.0
-    dev: false
-
-  /@vercel/kv@0.2.2:
-    resolution: {integrity: sha512-mqnQOB6bkp4h5eObxfLNIlhlVqOGSH8cWOlC5pDVWTjX3zL8dETO1ZBl6M74HBmeBjbD5+J7wDJklRigY6UNKw==}
-    engines: {node: '>=14.6'}
-    dependencies:
-      '@upstash/redis': 1.21.0
-    transitivePeerDependencies:
-      - encoding
     dev: false
 
   /@vercel/nft@0.22.6:
@@ -4977,15 +4956,6 @@ packages:
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  /isomorphic-fetch@3.0.0:
-    resolution: {integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==}
-    dependencies:
-      node-fetch: 2.6.11
-      whatwg-fetch: 3.6.19
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
   /jake@10.8.7:
     resolution: {integrity: sha512-ZDi3aP+fG/LchyBzUM804VjddnwfSfsdeYkwt8NcbKRvo4rFkjhs456iLFn3k2ZUWvNe4i48WACDbza8fhq2+w==}
     engines: {node: '>=10'}
@@ -6119,15 +6089,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /postcss@8.4.31:
-    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: true
-
   /preferred-pm@3.0.3:
     resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
     engines: {node: '>=10'}
@@ -7173,7 +7134,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.50.8(postcss@8.4.31)(rollup@2.79.1)(vite@4.3.9):
+  /unocss@0.50.8(postcss@8.4.24)(rollup@2.79.1)(vite@4.3.9):
     resolution: {integrity: sha512-3yqKkSm/SKCKxFolXNR12Mi64lr4PW95LSHKZ/a9Yzlf2PT1NirAn8/uJ8KoJJBNR2YWobtkLi4UplFz/8IAYA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -7185,7 +7146,7 @@ packages:
       '@unocss/astro': 0.50.8(rollup@2.79.1)(vite@4.3.9)
       '@unocss/cli': 0.50.8(rollup@2.79.1)
       '@unocss/core': 0.50.8
-      '@unocss/postcss': 0.50.8(postcss@8.4.31)
+      '@unocss/postcss': 0.50.8(postcss@8.4.24)
       '@unocss/preset-attributify': 0.50.8
       '@unocss/preset-icons': 0.50.8
       '@unocss/preset-mini': 0.50.8
@@ -7422,10 +7383,6 @@ packages:
   /webidl-conversions@4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
     dev: true
-
-  /whatwg-fetch@3.6.19:
-    resolution: {integrity: sha512-d67JP4dHSbm2TrpFj8AbO8DnL1JXL5J9u0Kq2xW6d0TFDbCA3Muhdt8orXC22utleTVj7Prqt82baN6RBvnEgw==}
-    dev: false
 
   /whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
