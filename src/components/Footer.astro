@@ -18,15 +18,30 @@
     <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.xyz" target="_blank">https://nav.free2gpt.xyz</a>🌟</div>
     <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用GPT4</a>😎</div>
     <div mt-2><a class=" gpt-subtitle text-xs" href="https://peiqishop.cn">赞助商: 佩奇商店,有售便宜稳定3.5和4.0 API Key</a>🦄</div>
+    <button id="ad_bt" class="text-slate-400 mt-2 border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">更多广告</button>
+      <div id="more_ad" class="hidden">
+        <div op-60 mt-2>Onekey虚拟卡：可付ChatGPT Plus、OpenAI账单，我们用了小半年了，还挺稳定的，不过是要用USDT充值，邀请链接：<a class="gpt-subtitle text-xs" href="https://card.onekey.so/?i=4DA9UN" target="_blank">https://card.onekey.so/?i=4DA9UN</a></div>
+        <div op-60 mt-2>八戒机场：支持ChatGPT，按量付费，不限时间，但节点偏少，稳定性还行不算太好，邀请链接：<a class="gpt-subtitle text-xs" href="https://bajie.one/#/register?code=6dLqxYZE" target="_blank">https://bajie.one/#/register?code=6dLqxYZE</a></div>
+      </div>
   </div>
 </footer>
-<!-- <script>
-document.getElementById('hongbao').addEventListener('click', toggle_img)
-function toggle_img() {
-  const img = document.getElementById('hongbao_img')
-  if (img.classList.contains('hidden'))
-    img.classList.remove('hidden')
-  else
-    img.classList.add('hidden')
-}
-</script> -->
+<script>
+  /*
+  document.getElementById('hongbao').addEventListener('click', toggle_img)
+  function toggle_img() {
+    const img = document.getElementById('hongbao_img')
+    if (img.classList.contains('hidden'))
+      img.classList.remove('hidden')
+    else
+      img.classList.add('hidden')
+  }
+  */
+  document.getElementById('ad_bt').addEventListener('click', toggle_ad)
+  function toggle_ad() {
+    const img = document.getElementById('more_ad')
+    if (img.classList.contains('hidden'))
+      img.classList.remove('hidden')
+    else
+      img.classList.add('hidden')
+  }
+</script>
