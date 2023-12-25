@@ -1,4 +1,4 @@
-Ωimport { Show, createSignal, onMount } from 'solid-js'
+import { Show, createSignal, onMount } from 'solid-js'
 
 interface InfoType { request_count: number, used_quota: number }
 
