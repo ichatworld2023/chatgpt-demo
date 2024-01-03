@@ -30,7 +30,7 @@ export default () => {
         </Show>
 
         <Show when={info().is_show === 1}>
-          <div op-60>我们联合GPT4赞助商给大家送点福利, 每日早上9点到10点送出一定量的8000字GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用
+          <div op-60>我们联合GPT4赞助商给大家送福利啦, 每日9点到10点送出8000字的GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用
             <p class="mt-1">{info().text}</p>
           </div>
         </Show>
