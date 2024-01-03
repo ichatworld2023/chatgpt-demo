@@ -90,4 +90,14 @@ const initTheme = () => {
 }
 
 initTheme()
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('copyLinkButton').addEventListener('click', () => {
+    navigator.clipboard.writeText('https://chatz.free2gpt.xyz').then(() => {
+      window.alert('链接已复制')
+    }).catch(() => {
+      window.alert('复制失败，请手动复制链接')
+    })
+  })
+})
 </script>
