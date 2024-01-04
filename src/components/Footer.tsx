@@ -34,17 +34,17 @@ export default () => {
             <div>
               我们联合GPT4赞助商给大家送福利啦, 每日不定时送出8000字的GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用
             </div>
-            <div class="mt-1">
+            <div class="mt-1 flex flex-wrap text-xs">
               <Index each={info().list}>
                 {(v, i) => (
-                  <span>
+                  <div class="mr-1">
                     <Show when={v().status === '正常'}>
                       {`${v().code} `}
                     </Show>
                     <Show when={v().status === '已使用'}>
                       <span class="op-60">{`${v().code}已用 `}</span>
                     </Show>
-                  </span>
+                  </div>
                 )}
               </Index>              
             </div>
