@@ -30,19 +30,24 @@ export default () => {
         </Show>
 
         <Show when={info().is_show === 1}>
-          <div op-60>我们联合GPT4赞助商给大家送福利啦, 每日不定时送出8000字的GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用
-            <Index each={info().list}>
-              {(v, i) => (
-                <span>
-                  <Show when={v().status === '正常'}>
-                    {v().code}&nbsp;
-                  </Show>
-                  <Show when={v().status === '已使用'}>
-                    <span class="op-60">{v().code}已用&nbsp;</span>
-                  </Show>
-                </span>
-              )}
-            </Index>
+          <div op-60>
+            <div>
+              我们联合GPT4赞助商给大家送福利啦, 每日不定时送出8000字的GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用
+            </div>
+            <div class="mt-1">
+              <Index each={info().list}>
+                {(v, i) => (
+                  <span>
+                    <Show when={v().status === '正常'}>
+                      {v().code}&nbsp;
+                    </Show>
+                    <Show when={v().status === '已使用'}>
+                      <span class="op-60">{v().code}已用&nbsp;</span>
+                    </Show>
+                  </span>
+                )}
+              </Index>              
+            </div>
           </div>
         </Show>
 
