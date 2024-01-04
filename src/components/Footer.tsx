@@ -39,10 +39,10 @@ export default () => {
                 {(v, i) => (
                   <span>
                     <Show when={v().status === '正常'}>
-                      {v().code}&nbsp;
+                      {`${v().code} `}
                     </Show>
                     <Show when={v().status === '已使用'}>
-                      <span class="op-60">{v().code}已用&nbsp;</span>
+                      <span class="op-60">{`${v().code}已用 `}</span>
                     </Show>
                   </span>
                 )}
