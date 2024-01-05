@@ -1,9 +1,19 @@
 import { Index, Show, createSignal, onMount } from 'solid-js'
+import { useClipboard } from 'solidjs-use'
 
-interface InfoType { is_show: number, text: string, list:array }
+interface InfoType { is_show: number, text: string, list: Array<any> }
 
 export default () => {
-  const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list:[] })
+  const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list: [] })
+
+  const [source] = createSignal('')
+  const { copy } = useClipboard({ source, copiedDuring: 1000 })
+
+  const copyAction = async(text) => {
+    copy(text).then(() => {
+      alert('复制成功')
+    })
+  }
 
   onMount(async() => {
     getInfo()
@@ -26,7 +36,7 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         <Show when={info().is_show === 0}>
-          <div op-60>朋友你好👋, 元旦快乐! 2023感谢有你的支持和捐赠, 2024我们会不忘初心, 继续提供免费的GPT服务, 希望它能助你一臂之力, 祝愿各位在新的一年里所愿皆有所得。如果大家觉得本站点做得还不错, 请考虑打赏支持我们, 或向朋友分享我们的链接: <span id="copyLinkButton" class="gpt-subtitle text-xs cursor-pointer">https://chatz.free2gpt.xyz</span> 这对我们持续维护非常重要, 谢谢😘</div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 2024新年快乐! 求分享:<span onClick={() => { copyAction('https://chatz.free2gpt.xyz') }} id="copyLinkButton" class="gpt-subtitle text-xs cursor-pointer">https://chatz.free2gpt.xyz</span> 求赞赏😘</div>
         </Show>
 
         <Show when={info().is_show === 1}>
@@ -36,7 +46,7 @@ export default () => {
             </div>
             <div class="mt-1 flex flex-wrap text-xs">
               <Index each={info().list}>
-                {(v, i) => (
+                {v => (
                   <div class="mr-1">
                     <Show when={v().status === '正常'}>
                       {`${v().code} `}
@@ -46,7 +56,7 @@ export default () => {
                     </Show>
                   </div>
                 )}
-              </Index>              
+              </Index>
             </div>
           </div>
         </Show>
