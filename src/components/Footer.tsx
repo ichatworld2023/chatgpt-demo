@@ -36,7 +36,7 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         <Show when={info().is_show === 0}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 2024新年快乐! 求分享:<span onClick={() => { copyAction('https://chatz.free2gpt.xyz') }} id="copyLinkButton" class="gpt-subtitle text-xs cursor-pointer">https://chatz.free2gpt.xyz</span> 求赞赏😘</div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天, 你的赞赏和分享是我们持续维护的最大动力, 祝:2024龙行大运!</div>
         </Show>
 
         <Show when={info().is_show === 1}>
