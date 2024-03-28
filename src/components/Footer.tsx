@@ -36,7 +36,7 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         {/*         <Show when={info().is_show === 0}> */}
-        <div op-60>受OpenAI政策影响，上游token供应商大幅涨价，网站的维护成本大大增加。在现有token额度用完后，我们可能会暂时切换到谷歌的Gemini Pro模型，同时我们也会继续寻找便宜的GPT3.5渠道。如果您有相关资源欢迎联系我们: free2gpt@gmail.com ，我们将不忘初心，继续为大家提供免费服务, 感谢您的一路陪伴，您的赞赏和分享是我们持续维护的最大动力💪</div>
+        <div op-60>站点已切换到谷歌的Gemini Pro模型, 不知跟ChatGPT3.5对比效果如何? 任何建议都可邮箱给我们留言, 您的赞赏和反馈是我们持续维护的最大动力💪</div>
         {/*         </Show> */}
 
         <Show when={info().is_show === 1}>
