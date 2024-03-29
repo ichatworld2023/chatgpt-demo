@@ -36,7 +36,7 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         {/*         <Show when={info().is_show === 0}> */}
-        <div op-60>站点已切换到谷歌的Gemini Pro模型, 不知跟ChatGPT3.5对比效果如何? 任何建议都可邮箱给我们留言, 您的赞赏和反馈是我们持续维护的最大动力💪</div>
+        <div op-60>完全免费 无需魔法 无需登录 120次/天 谷歌Gemini Pro模型 您的赞赏和分享是我们持续维护的最大动力💪</div>
         {/*         </Show> */}
 
         <Show when={info().is_show === 1}>
