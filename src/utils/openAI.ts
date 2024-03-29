@@ -34,7 +34,7 @@ export const parseOpenAIStream = (rawResponse: Response) => {
         if (event.type === 'event') {
           const data = event.data
           if (data === '[DONE]') {
-            // controller.close()
+            controller.close()
             return
           }
           try {
