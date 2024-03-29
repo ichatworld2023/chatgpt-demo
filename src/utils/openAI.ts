@@ -20,7 +20,7 @@ export const generatePayload = (apiKey: string, messages: ChatMessage[]): Reques
 
 export const parseOpenAIStream = (rawResponse: Response) => {
   const encoder = new TextEncoder()
-  const decoder = new TextDecoder()
+  const decoder = new TextDecoder('utf-8')
   if (!rawResponse.ok) {
     return new Response(rawResponse.body, {
       status: rawResponse.status,
@@ -50,7 +50,7 @@ export const parseOpenAIStream = (rawResponse: Response) => {
 
       const parser = createParser(streamParser)
       for await (const chunk of rawResponse.body as any)
-        parser.feed(decoder.decode(chunk, { stream: true }))
+        parser.feed(decoder.decode(chunk))
     },
   })
 
