@@ -63,7 +63,7 @@ export default () => {
 
         <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav.free2gpt.xyz</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用GPT4</a>😎</div>
-        <div mt-2><a class=" gpt-subtitle text-xs" href="https://peiqishop.cn">赞助商: 佩奇商店,有售便宜稳定3.5和4.0 API Key</a>🦄</div>
+        <div mt-2><a class=" gpt-subtitle text-xs" href="https://www.gptapi.us/?re=free2gpt">赞助商: gptapi.us, 全网最低价的GPT-4 API</a>🦄</div>
       </div>
     </footer>
   )
