@@ -21,6 +21,7 @@ const { title } = Astro.props;
     <title>{title}</title>
     <meta name="description" content="免费GPT">
     <meta name="keywords" content="GPT,免费,free,GPT公益站">
+    <meta name="google-adsense-account" content="ca-pub-8057112648173189">
 
     { import.meta.env.HEAD_SCRIPTS && <Fragment set:html={import.meta.env.HEAD_SCRIPTS } /> }
     { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
