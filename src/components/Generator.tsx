@@ -98,10 +98,10 @@ export default () => {
         })
       }
 
-      requestMessageList.unshift({
-        role: 'system',
-        content: '跟你对话的大部分是中文用户, 除非要求你进行翻译, 否则请尽量使用中文回答',
-      })
+      // requestMessageList.unshift({
+      //   role: 'system',
+      //   content: '跟你对话的大部分是简体中文用户, 除非要求你进行翻译, 否则请尽量使用简体中文回答',
+      // })
 
       const timestamp = Date.now()
       const response = await fetch('/api/generate', {
