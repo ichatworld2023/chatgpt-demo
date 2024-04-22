@@ -97,6 +97,12 @@ export default () => {
           content: currentSystemRoleSettings(),
         })
       }
+
+      requestMessageList.unshift({
+        role: 'system',
+        content: '你是由Meta训练的人工智能助手, 版本号为llama3, 跟你对话的大部分是中文用户, 除非要求你进行翻译, 否则请尽量使用中文回答',
+      })
+
       const timestamp = Date.now()
       const response = await fetch('/api/generate', {
         method: 'POST',

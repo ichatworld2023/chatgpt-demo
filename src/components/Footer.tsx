@@ -36,7 +36,7 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         {/*         <Show when={info().is_show === 0}> */}
-        <div op-60>完全免费 无需魔法 无需登录 120次/天 谷歌Gemini Pro模型 您的赞赏和分享是我们持续维护的最大动力💪</div>
+        <div op-60>完全免费 无需魔法 无需登录 120次/天 站点模型已更新为Meta最新发布的llama3 70B版本, 速度更快体验更好, 站点维护不易, 求赞赏求分享🥺</div>
         {/*         </Show> */}
 
         <Show when={info().is_show === 1}>
@@ -63,7 +63,7 @@ export default () => {
 
         <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav.free2gpt.xyz</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用GPT4</a>😎</div>
-        <div mt-2><a class=" gpt-subtitle text-xs" href="https://www.gptapi.us/?re=free2gpt">赞助商: GPTAPI.US, 全网最低价的GPT系列 API</a>🦄</div>
+        {/* <div mt-2><a class=" gpt-subtitle text-xs" href="https://www.gptapi.us/?re=free2gpt">赞助商: GPTAPI.US, 全网最低价的GPT系列 API</a>🦄</div> */}
       </div>
     </footer>
   )
