@@ -3,15 +3,14 @@ import { useThrottleFn } from 'solidjs-use'
 import { generateSignature } from '@/utils/auth'
 import IconClear from './icons/Clear'
 import MessageItem from './MessageItem'
-import SystemRoleSettings from './SystemRoleSettings'
 import ErrorMessageItem from './ErrorMessageItem'
 import Donation from './Donation'
 import type { ChatMessage, ErrorMessage } from '@/types'
 
 export default () => {
   let inputRef: HTMLTextAreaElement
-  const [currentSystemRoleSettings, setCurrentSystemRoleSettings] = createSignal('')
-  const [systemRoleEditing, setSystemRoleEditing] = createSignal(false)
+  const [currentSystemRoleSettings] = createSignal('')
+  const [systemRoleEditing] = createSignal(false)
   const [messageList, setMessageList] = createSignal<ChatMessage[]>([])
   const [currentError, setCurrentError] = createSignal<ErrorMessage>()
   const [currentAssistantMessage, setCurrentAssistantMessage] = createSignal('')
@@ -29,21 +28,6 @@ export default () => {
       nowPostion < lastPostion && setStick(false)
       lastPostion = nowPostion
     })
-
-    try {
-      if (sessionStorage.getItem('messageList'))
-      // setMessageList(JSON.parse(sessionStorage.getItem('messageList')))
-
-      {
-        if (sessionStorage.getItem('systemRoleSettings'))
-          setCurrentSystemRoleSettings(sessionStorage.getItem('systemRoleSettings'))
-      }
-
-      if (localStorage.getItem('stickToBottom') === 'stick')
-        setStick(true)
-    } catch (err) {
-      console.error(err)
-    }
 
     window.addEventListener('beforeunload', handleBeforeUnload)
     onCleanup(() => {
@@ -98,10 +82,12 @@ export default () => {
         })
       }
 
-      // requestMessageList.unshift({
-      //   role: 'system',
-      //   content: '跟你对话的大部分是简体中文用户, 除非要求你进行翻译, 否则请尽量使用简体中文回答',
-      // })
+      if (window.location.host === 'llama3.free2gpt.xyz') {
+        requestMessageList.unshift({
+          role: 'system',
+          content: '跟你对话的大部分是简体中文用户, 除非要求你进行翻译, 否则请尽量使用简体中文回答',
+        })
+      }
 
       const timestamp = Date.now()
       const response = await fetch('/api/generate', {
@@ -231,12 +217,12 @@ export default () => {
       { currentError() && <ErrorMessageItem data={currentError()} onRetry={retryLastFetch} /> }
       <Show
         when={!loading()}
-        fallback={() => (
+        fallback={
           <div class="gen-cb-wrapper">
             <span>AI思考中...</span>
             <div class="gen-cb-stop" onClick={stopStreamFetch}>停止</div>
           </div>
-        )}
+        }
       >
         <div class="gen-text-wrapper" class:op-50={systemRoleEditing()}>
           <textarea

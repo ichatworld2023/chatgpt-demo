@@ -1,22 +1,24 @@
 import { Index, Show, createSignal, onMount } from 'solid-js'
-import { useClipboard } from 'solidjs-use'
+// import { useClipboard } from 'solidjs-use'
 
 interface InfoType { is_show: number, text: string, list: Array<any> }
 
 export default () => {
   const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list: [] })
+  const [host, setHost] = createSignal('')
 
-  const [source] = createSignal('')
-  const { copy } = useClipboard({ source, copiedDuring: 1000 })
+  // const [source] = createSignal('')
+  // const { copy } = useClipboard({ source, copiedDuring: 1000 })
 
-  const copyAction = async(text) => {
-    copy(text).then(() => {
-      alert('复制成功')
-    })
-  }
+  // const copyAction = async(text) => {
+  //   copy(text).then(() => {
+  //     alert('复制成功')
+  //   })
+  // }
 
   onMount(async() => {
     getInfo()
+    setHost(window.location.host)
   })
 
   const getInfo = async() => {
@@ -35,9 +37,13 @@ export default () => {
       <div mt-6 text-xs>
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
-        {/*         <Show when={info().is_show === 0}> */}
-        <div op-60>完全免费 无需魔法 无需登录 120次/天 抱歉, 由于llama3 70B有速率限制, 没法提供稳定服务, 先用回gemini-pro模型, 我们会继续寻找资源努力提供更好的模型给大家用</div>
-        {/*         </Show> */}
+        <Show when={host() !== 'llama3.free2gpt.xyz'}>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 gemini-pro模型, 我们希望能尽快用上llama3 70B模型, 但目前还不稳定, 为此我们在保证gemini-pro稳定的情况下单独搭建 <a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">llama3 70B站点</a> 给大家尝鲜, 欢迎试用反馈</div>
+        </Show>
+
+        <Show when={host() === 'llama3.free2gpt.xyz'}>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 Meta最新发布的llama3 70B模型, 新模型是否好用? 期待您的反馈, 您的赞赏和分享是我们持续维护的最大动力🥹 <a class=" gpt-subtitle text-xs" href="https://chatz.free2gpt.xyz">返回使用gemini-pro模型</a></div>
+        </Show>
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
