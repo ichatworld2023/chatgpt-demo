@@ -74,7 +74,7 @@ export default () => {
           <div op-60>支付宝红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">领取</span></div>
           <Show when={show() === 1}>
             <div my-4>
-              <img class="w-4/5 mt-2 max-w-[300px]" src="./public/hongbao_l.jpg" />
+              <img class="w-4/5 mt-2 max-w-[300px]" src="/hongbao_l.jpg" />
             </div>
           </Show>
         </div>
