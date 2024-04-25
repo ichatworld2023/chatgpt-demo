@@ -6,6 +6,7 @@ interface InfoType { is_show: number, text: string, list: Array<any> }
 export default () => {
   const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list: [] })
   const [host, setHost] = createSignal('')
+  const [show, setShow] = createSignal(0)
 
   // const [source] = createSignal('')
   // const { copy } = useClipboard({ source, copiedDuring: 1000 })
@@ -69,6 +70,14 @@ export default () => {
 
         <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav.free2gpt.xyz</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用GPT4</a>😎</div>
+        <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
+          <div op-60>支付宝红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">领取</span></div>
+          <Show when={show() === 1}>
+            <div my-4>
+              <img class="w-4/5 mt-2 max-w-[300px]" src="./public/hongbao_l.jpg" />
+            </div>
+          </Show>
+        </div>
         {/* <div mt-2><a class=" gpt-subtitle text-xs" href="https://www.gptapi.us/?re=free2gpt">赞助商: GPTAPI.US, 全网最低价的GPT系列 API</a>🦄</div> */}
       </div>
     </footer>
