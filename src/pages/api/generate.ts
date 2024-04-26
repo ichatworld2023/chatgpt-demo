@@ -48,6 +48,11 @@ export const post: APIRoute = async(context) => {
     method: 'GET',
   })
 
+  const res = await resp1.text()
+  const resJson1 = JSON.parse(res)
+  if (resJson1.code !== 200)
+    return new Response(resJson1.message)
+
   fetch(`${import.meta.env.API_URL}/plugin/freesite/saveMessage`, {
     headers: {
       'Content-Type': 'application/json',
@@ -59,11 +64,6 @@ export const post: APIRoute = async(context) => {
       site: 'free2gpt',
     }),
   })
-
-  const res = await resp1.text()
-  const resJson1 = JSON.parse(res)
-  if (resJson1.code !== 200)
-    return new Response(resJson1.message)
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
