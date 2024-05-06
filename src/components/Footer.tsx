@@ -68,7 +68,7 @@ export default () => {
           </div>
         </Show>
 
-        <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav.free2gpt.xyz</a>🌟</div>
+        <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav1.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav1.free2gpt.xyz</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用GPT4</a>😎</div>
         <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
           <div op-60>听说支付宝又有大额红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">领取</span></div>
