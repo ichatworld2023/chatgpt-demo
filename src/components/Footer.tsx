@@ -39,11 +39,11 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         <Show when={host() !== 'llama3.free2gpt.xyz'}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 gemini-pro模型, 试用Meta最新发布的<a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">llama3 70B</a></div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 DeepSeek-V2模型, 试用Meta最新发布的<a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">llama3 70B</a></div>
         </Show>
 
         <Show when={host() === 'llama3.free2gpt.xyz'}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 Meta最新发布的llama3 70B模型, 您的赞赏和分享是我们持续维护的最大动力🥹 <a class=" gpt-subtitle text-xs" href="https://chatz.free2gpt.xyz">返回使用gemini-pro模型</a></div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 Meta最新发布的llama3 70B模型, 您的赞赏和分享是我们持续维护的最大动力🥹 <a class=" gpt-subtitle text-xs" href="https://chatz.free2gpt.xyz">返回使用DeepSeek-V2模型</a></div>
         </Show>
 
         <Show when={info().is_show === 1}>
