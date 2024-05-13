@@ -39,7 +39,7 @@ export default () => {
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
         <Show when={host() !== 'llama3.free2gpt.xyz'}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 gemini-pro模型, 试用Meta最新发布的<a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">llama3 70B</a></div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b模型, 由于谷歌gemini模型开始收费了, 我们正在积极寻找替代模型</div>
         </Show>
 
         <Show when={host() === 'llama3.free2gpt.xyz'}>
