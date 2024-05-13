@@ -38,7 +38,7 @@ export default () => {
       <div mt-6 text-xs>
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
-        <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b模型, 由于谷歌gemini模型开始收费了, 我们正在积极寻找替代模型</div>
+        <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b模型, 维护稳定的服务不易, 您的赞赏和分享是我们持续维护的最大动力🥹</div>
         
 
 {/*         <Show when={host() === 'llama3.free2gpt.xyz'}>
