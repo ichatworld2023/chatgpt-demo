@@ -38,13 +38,12 @@ export default () => {
       <div mt-6 text-xs>
         {/* <div op-60>完全免费 无需魔法 无需登录 120次/天</div> */}
 
-        <Show when={host() !== 'llama3.free2gpt.xyz'}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b模型, 由于谷歌gemini模型开始收费了, 我们正在积极寻找替代模型</div>
-        </Show>
+        <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b模型, 由于谷歌gemini模型开始收费了, 我们正在积极寻找替代模型</div>
+        
 
-        <Show when={host() === 'llama3.free2gpt.xyz'}>
+{/*         <Show when={host() === 'llama3.free2gpt.xyz'}>
           <div op-60>完全免费 无需魔法 无需登录 120次/天 Meta最新发布的llama3 70B模型, 您的赞赏和分享是我们持续维护的最大动力🥹 <a class=" gpt-subtitle text-xs" href="https://chatz.free2gpt.xyz">返回使用gemini-pro模型</a></div>
-        </Show>
+        </Show> */}
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
