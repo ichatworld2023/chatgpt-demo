@@ -48,7 +48,7 @@ export default () => {
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
             <div>
-              GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用😎
+              GPT4兑换码, <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">登录</a>兑换就能用, GPT4站点模型已更新到OpenAI2024年5月13号最新发布的gpt-4o(gpt-4o-2024-05-13)模型,速度飞快,性能更好,价格更便宜,欢迎体验😎
             </div>
             <div class="mt-1 flex flex-wrap text-xs">
               <Index each={info().list}>
