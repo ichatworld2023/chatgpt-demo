@@ -194,7 +194,7 @@ export default () => {
   }
 
   return (
-    <div my-3>
+    <div mt-1 mb-3>
 
       <Donation />
 
