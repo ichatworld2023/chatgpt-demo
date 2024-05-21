@@ -37,7 +37,7 @@ export default () => {
           </div>
         </Show>
         <p
-          mt-1
+          mt-2
           text-xs
           op-60
           w-full
