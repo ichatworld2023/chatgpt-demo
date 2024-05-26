@@ -25,7 +25,7 @@ export default () => {
   return (
     <div class="mt-1">
       <div onClick={() => { setShow(show() ? 0 : 1) }}>
-        <p mt-1 text-sm op-60 class={show() === 0 ? 'hidden' : ''}>
+        <p mt-1 text-sm op-60>
           <span>为了能持久运营,我们需要你的</span>
           <span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">捐赠</span>
           <span>🙏🏻</span>
