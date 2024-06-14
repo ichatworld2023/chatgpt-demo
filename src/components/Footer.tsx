@@ -38,11 +38,11 @@ export default () => {
       <div mt-6 text-xs>
 
         <Show when={host() !== 'llama3.free2gpt.xyz'}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 目前服务不稳定，主站暂时先降级为llama3-8b模型，手动切换<a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">llama3-70b模型</a></div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-8b，<a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">切换llama3-70b模型</a></div>
         </Show>
 
         <Show when={host() === 'llama3.free2gpt.xyz'}>
-          <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b模型<a class=" gpt-subtitle text-xs" href="https://chatz.free2gpt.xyz">返回使用llama3-8b模型</a></div>
+          <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-70b，<a class=" gpt-subtitle text-xs" href="https://chatz.free2gpt.xyz">返回llama3-8b模型</a></div>
         </Show>
 
         <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav1.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav1.free2gpt.xyz</a>🌟</div>
