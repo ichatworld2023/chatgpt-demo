@@ -1,23 +1,3 @@
-# FROM node:20-alpine as builder
-# WORKDIR /usr/src
-# RUN npm install -g pnpm
-# COPY package.json pnpm-lock.yaml ./
-# COPY . .
-# RUN pnpm install
-# RUN pnpm run build
-
-# FROM node:20-alpine
-# WORKDIR /usr/src
-# RUN npm install -g pnpm
-# COPY --from=builder /usr/src/dist ./dist
-# COPY --from=builder /usr/src/hack ./
-# COPY package.json pnpm-lock.yaml ./
-# RUN pnpm install
-# ENV HOST=0.0.0.0 PORT=3000 NODE_ENV=production
-# EXPOSE $PORT
-# CMD ["/bin/sh", "docker-entrypoint.sh"]
-
-
 FROM node:20-alpine
 WORKDIR /usr/src
 RUN npm install -g pnpm
@@ -26,4 +6,4 @@ RUN pnpm install
 RUN pnpm run build
 ENV HOST=0.0.0.0 PORT=3000
 EXPOSE $PORT
-CMD ["/bin/sh", "hack/docker-entrypoint.sh"]
+ENTRYPOINT [ "node","dist/server/entry.mjs" ]
