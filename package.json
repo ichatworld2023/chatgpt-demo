@@ -40,7 +40,6 @@
     "@typescript-eslint/parser": "^5.60.0",
     "@vite-pwa/astro": "^0.1.1",
     "eslint-plugin-astro": "^0.27.1",
-    "punycode": "^2.3.0",
     "unocss": "^0.50.8"
   }
 }
