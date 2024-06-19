@@ -41,7 +41,7 @@ export default () => {
           <div op-60>完全免费 无需魔法 无需登录 120次/天 当前llama3-8b，<a class=" gpt-subtitle text-xs" href="https://llama3.free2gpt.xyz">切换llama3-70b模型</a></div>
         </Show> */}
 
-        <div op-60>完全免费 无需魔法 无需登录 120次/天 求捐赠求分享，您的支持是我们持续维护的最大动力</div>
+        <div op-60>完全免费 无需魔法 无需登录 120次/天</div>
 
         <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav1.free2gpt.xyz" target="_blank" rel="noreferrer">https://nav1.free2gpt.xyz</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用GPT4</a>😎</div>
