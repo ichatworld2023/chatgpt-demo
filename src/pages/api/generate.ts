@@ -42,7 +42,7 @@ export const post: APIRoute = async(context) => {
   // #vercel-end
 
   const realIP = context.request.headers.get('CF-Connecting-IP') || context.clientAddress
-  const resp1 = await fetch(`${import.meta.env.API_URL}/plugin/freesite/accesslog?ip=${realIP}`, {
+  const resp1 = await fetch(`${import.meta.env.API_URL}/plugin/freesite/accesslog?ip=${realIP}&url=free2gpt.xyz`, {
     headers: {
       'Content-Type': 'application/json',
     },
@@ -60,7 +60,7 @@ export const post: APIRoute = async(context) => {
     },
     method: 'POST',
     body: JSON.stringify({
-      ip: context.clientAddress,
+      ip: realIP,
       message: messages,
       site: 'free2gpt',
     }),
