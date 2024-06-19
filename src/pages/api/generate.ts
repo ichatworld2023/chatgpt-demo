@@ -41,7 +41,8 @@ export const post: APIRoute = async(context) => {
     initOptions.dispatcher = new ProxyAgent(httpsProxy)
   // #vercel-end
 
-  const resp1 = await fetch(`${import.meta.env.API_URL}/plugin/freesite/accesslog?ip=${context.clientAddress}`, {
+  const realIP = context.request.headers.get('CF-Connecting-IP') || context.clientAddress
+  const resp1 = await fetch(`${import.meta.env.API_URL}/plugin/freesite/accesslog?ip=${realIP}`, {
     headers: {
       'Content-Type': 'application/json',
     },

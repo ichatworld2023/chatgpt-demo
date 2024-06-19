@@ -27,7 +27,7 @@ export default defineConfig({
       manifest: {
         name: 'Free2gpt',
         short_name: 'Free2gpt',
-        description: 'A free way to use chatgpt',
+        description: 'A free way to use chatgpt,免费使用chatgpt',
         theme_color: '#212129',
         background_color: '#ffffff',
         icons: [
