@@ -75,6 +75,9 @@ export default () => {
             </div>
           </div>
         </Show>
+
+        <div mt-2><a href="https://claude.gptnb.xyz"><span class="op-60">👉体验Anthropic6月20新鲜出炉最强的</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet</span></a></div>
+
       </div>
     </footer>
   )
