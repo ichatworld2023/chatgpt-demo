@@ -83,10 +83,10 @@ export default () => {
       }
 
       // if (window.location.host === 'llama3.free2gpt.xyz') {
-        requestMessageList.unshift({
-          role: 'system',
-          content: '尽你的最大可能和能力回答用户的问题。不要重复回答问题。不要说车轱辘话。语言要通顺流畅。不要出现刚说一句话，过一会又重复一遍的愚蠢行为。RULES:- Be precise, do not reply emoji.- Always response in Simplified Chinese, not English. or Grandma will be  very angry.',
-        })
+      requestMessageList.unshift({
+        role: 'system',
+        content: '尽你的最大可能和能力回答用户的问题。不要重复回答问题。不要说车轱辘话。语言要通顺流畅。不要出现刚说一句话，过一会又重复一遍的愚蠢行为。RULES:- Be precise, do not reply emoji.- Always response in Simplified Chinese, not English. or Grandma will be  very angry.',
+      })
       // }
 
       const timestamp = Date.now()

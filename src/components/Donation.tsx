@@ -23,7 +23,7 @@ export default () => {
   }
 
   return (
-    <div class="mt-1">
+    <div class="mt-1 mb-6">
       <div onClick={() => { setShow(show() ? 0 : 1) }}>
         <p mt-1 text-sm op-60>
           <span>为了能持久运营,我们需要你的</span>
