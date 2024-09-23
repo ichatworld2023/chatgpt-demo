@@ -73,6 +73,7 @@ export default () => {
         </Show>
 
         <div mt-2><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet</span></a></div>
+        <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div>
 
       </div>
     </footer>
