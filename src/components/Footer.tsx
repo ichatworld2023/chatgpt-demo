@@ -42,7 +42,7 @@ export default () => {
         <div mt-2 op-60>请保存新域名: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用gpt4o</a>😎</div>
         <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
-          {/*           <div op-60>听说支付宝又有大额红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">领取</span></div> */}
+          <div op-60>听说支付宝又有大额红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">领取</span></div>
           <Show when={show() === 1}>
             <div my-4>
               <img class="w-4/5 mt-2 max-w-[300px]" src="/hongbao_l.jpg" />
