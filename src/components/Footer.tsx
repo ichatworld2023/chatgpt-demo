@@ -37,7 +37,7 @@ export default () => {
     <footer>
       <div mt-6 text-xs>
 
-        <div op-60>完全免费 无需魔法 无需登录 120次/天 <span class="op-0">免费ChatGPT</span></div>
+        <div op-60>完全免费 无需魔法 无需登录 120次/天 当前模型: llama3.1-70b Gemini-1.5-flash-002</div>
 
         <div mt-2 op-60>请保存新域名: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用gpt4o</a>😎</div>
