@@ -7,6 +7,7 @@ export default () => {
   const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list: [] })
   const [host, setHost] = createSignal('')
   const [show, setShow] = createSignal(0)
+  const [remain, setRemain] = createSignal(0)
 
   // const [source] = createSignal('')
   // const { copy } = useClipboard({ source, copiedDuring: 1000 })
@@ -19,6 +20,7 @@ export default () => {
 
   onMount(async() => {
     getInfo()
+    getRemain()
     setHost(window.location.host)
   })
 
@@ -33,15 +35,26 @@ export default () => {
     if (responseJson.code === 200)
       setInfo(responseJson.data)
   }
+
+  const getRemain = async() => {
+    const response = await fetch('/api/getremain', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    const responseJson = await response.json()
+    if (responseJson.code === 200)
+      setRemain(responseJson.data)
+  }
   return (
     <footer>
       <div mt-6 text-xs>
 
-        <div op-60>完全免费 无需魔法 无需登录 120次/天 当前模型: llama3.1-70b Gemini-1.5-flash-002</div>
+        <div op-60>完全免费 无需魔法 无需登录 当日剩{ remain() }次 当前模型: llama3.1-70b Gemini-1.5-flash-002</div>
 
         <div mt-2 op-60>请保存新域名: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
         <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用gpt4o</a>😎</div>
-       
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
@@ -67,7 +80,7 @@ export default () => {
 
         <div mt-2><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet</span></a></div>
         <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div>
-         <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
+        <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
           <div op-60>听说支付宝又有大额红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">支持我们</span></div>
           <Show when={show() === 1}>
             <div my-4>
