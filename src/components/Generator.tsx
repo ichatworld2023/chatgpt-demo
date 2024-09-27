@@ -83,11 +83,26 @@ export default () => {
       }
 
       // if (window.location.host === 'llama3.free2gpt.xyz') {
-      requestMessageList.unshift({
-        role: 'system',
-        content: '尽你的最大可能和能力回答用户的问题。不要重复回答问题。不要说车轱辘话。语言要通顺流畅。不要出现刚说一句话，过一会又重复一遍的愚蠢行为。RULES:- Be precise, do not reply emoji.- Always response in Simplified Chinese, not English. or Grandma will be  very angry.',
-      })
+      // requestMessageList.unshift({
+      //   role: 'system',
+      //   content: '尽你的最大可能和能力回答用户的问题。不要重复回答问题。不要说车轱辘话。语言要通顺流畅。不要出现刚说一句话，过一会又重复一遍的愚蠢行为。RULES:- Be precise, do not reply emoji.- Always response in Simplified Chinese, not English. or Grandma will be  very angry.',
+      // })
       // }
+
+      // 判断requestMessageList中content总长度,大于1万提示
+      let contentLength = 0
+      requestMessageList.forEach((message) => {
+        contentLength += message.content.length
+      })
+      if (contentLength > 10000) {
+        setCurrentError({
+          code: 'message_too_long',
+          message: '超出1万字符长度限制, 请清空后继续',
+        })
+        setLoading(false)
+        setController(null)
+        return
+      }
 
       const timestamp = Date.now()
       const response = await fetch('/api/generate', {
