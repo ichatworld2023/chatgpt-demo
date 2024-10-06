@@ -80,14 +80,14 @@ export default () => {
 
         <div mt-2><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet</span></a></div>
         <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div>
-        <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
+{/*         <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
           <div op-60>点击可领支付宝大额红包<span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">领取</span></div>
           <Show when={show() === 1}>
             <div my-4>
               <img class="w-4/5 mt-2 max-w-[300px]" src="/hongbao_f.jpg" />
             </div>
           </Show>
-        </div>
+        </div> */}
 
       </div>
     </footer>
