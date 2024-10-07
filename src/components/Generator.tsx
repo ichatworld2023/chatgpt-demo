@@ -89,15 +89,15 @@ export default () => {
       // })
       // }
 
-      // 判断requestMessageList中content总长度,大于1万提示
+      // 判断requestMessageList中content总长度,大于8000万提示
       let contentLength = 0
       requestMessageList.forEach((message) => {
         contentLength += message.content.length
       })
-      if (contentLength > 10000) {
+      if (contentLength > 8000) {
         setCurrentError({
           code: 'message_too_long',
-          message: '超出1万字符长度限制, 请清空后继续',
+          message: '超出8000字符长度限制, 请清空后继续',
         })
         setLoading(false)
         setController(null)
