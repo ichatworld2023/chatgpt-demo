@@ -82,7 +82,8 @@ export default () => {
         <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div>
         
         <div mt-2 onClick={() => { copyAction('2:/⇥R06aMxvkldaJz⇤') }}>
-          <div op-60>兄弟们, 拼多多帮我砍一刀 2:/⇥R06aMxvkldaJz⇤ <span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">复制口令</span></div>
+          <div op-60>兄弟们, 拼多多帮我砍一刀</div>
+          <div op-60> 2:/⇥R06aMxvkldaJz⇤ <span class="border-1 px-2 py-1 mx-1 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">复制口令</span></div>
         </div> 
         
 {/*         <div mt-2 onClick={() => { setShow(show() ? 0 : 1) }}>
