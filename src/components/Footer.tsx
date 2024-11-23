@@ -54,7 +54,7 @@ export default () => {
         <div op-60>完全免费 无需魔法 无需登录 当日剩{ remain() }次 模型: llama3 Gemini mistral</div>
 
         <div mt-2 op-60>请保存新域名: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
-        <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用gpt4o</a>😎</div>
+        <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用gpt4o(2024-11-20最新模型)</a>😎</div>
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
