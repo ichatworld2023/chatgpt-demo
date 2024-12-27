@@ -54,7 +54,7 @@ export default () => {
         <div op-60>完全免费 无需魔法 无需登录 当日剩{ remain() }次 模型: llama3 Gemini mistral</div>
 
         <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
-        <div mt-2><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用最新GPT4o<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a>😎</div>
+        <div mt-4><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用最新GPT4o<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a>😎</div>
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
@@ -91,7 +91,7 @@ export default () => {
           </div>
         </Show>
 
-        <div mt-2><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet </span></a></div>
+        <div mt-4><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet </span></a></div>
         <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div>
 
         {/*         <div mt-2 onClick={() => { copyAction('2:/⇥R06aMxvkldaJz⇤') }}>
