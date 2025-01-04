@@ -42,14 +42,14 @@ export default () => {
       </div>
       <div mt-6 text-xs class="hidden mobile:block">
 
-        <div op-60>完全免费 无需魔法 无需登录 当日剩{ remain() }次 模型: llama3 Gemini mistral</div>
+        <div op-60>完全免费 无需登录 当日剩{ remain() }次 模型: Gemini</div>
 
-        <div mt-2 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
-        <div mt-4><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">赞助商: 3.5不够聪明? 付费使用最新GPT4o<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a>😎</div>
+        <div mt-4 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
+        <div mt-4>👉 <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">3.5不够聪明? 付费使用GPT4o<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a></div>
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
-            <div class="mt-1 flex flex-wrap text-xs">
+            <div class="mt-1 flex text-xs whitespace-nowrap overflow-hidden overflow-ellipsis">
               <span>仅限单次:&nbsp;</span>
               <Index each={info().batch1}>
                 {v => (
@@ -64,7 +64,7 @@ export default () => {
                 )}
               </Index>
             </div>
-            <div class="mt-1 flex flex-wrap text-xs">
+            <div class="mt-1 flex text-xs whitespace-nowrap overflow-hidden overflow-ellipsis">
               <span>每日可兑:&nbsp;</span>
               <Index each={info().batch2}>
                 {v => (
