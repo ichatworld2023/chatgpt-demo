@@ -1,27 +1,14 @@
 import { Index, Show, createSignal, onMount } from 'solid-js'
-import { useClipboard } from 'solidjs-use'
 
 interface InfoType { is_show: number, text: string, list: Array<any>, batch1: Array<any>, batch2: Array<any> }
 
 export default () => {
   const [info, setInfo] = createSignal<InfoType>({ is_show: 1, text: '', list: [], batch1: [], batch2: [] })
-  const [host, setHost] = createSignal('')
-  const [show, setShow] = createSignal(0)
   const [remain, setRemain] = createSignal(0)
-
-  const [source] = createSignal('')
-  const { copy } = useClipboard({ source, copiedDuring: 1000 })
-
-  const copyAction = async(text) => {
-    copy(text).then(() => {
-      alert('口令复制成功')
-    })
-  }
 
   onMount(async() => {
     getInfo()
     getRemain()
-    setHost(window.location.host)
   })
 
   const getInfo = async() => {
@@ -49,7 +36,11 @@ export default () => {
   }
   return (
     <footer>
-      <div mt-6 text-xs>
+      <div mt-6 text-xs class="block mobile:hidden">
+        <div op-60>完全免费 无需登录 当日剩{ remain() }次</div>
+        <div mt-4><span class="op-60">👉 </span><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">付费使用GPT4o</a></div>
+      </div>
+      <div mt-6 text-xs class="hidden mobile:block">
 
         <div op-60>完全免费 无需魔法 无需登录 当日剩{ remain() }次 模型: llama3 Gemini mistral</div>
 

@@ -211,7 +211,9 @@ export default () => {
   return (
     <div mt-1 mb-3>
 
-      <Donation />
+      <div class="hidden mobile:block">
+        <Donation />
+      </div>
 
       <Index each={messageList()}>
         {(message, index) => (
@@ -239,7 +241,7 @@ export default () => {
           </div>
         }
       >
-        <div class="gen-text-wrapper" class:op-50={systemRoleEditing()}>
+        <div class="my-4 mobile:fc mobile:gap-2 transition-opacity" class:op-50={systemRoleEditing()}>
           <textarea
             ref={inputRef!}
             disabled={systemRoleEditing()}
@@ -254,12 +256,14 @@ export default () => {
             rows="1"
             class="gen-textarea"
           />
-          <button class="w-28" onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
-            发送
-          </button>
-          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
-            <IconClear />
-          </button>
+          <div class="flex gap-2">
+            <button class="w-28" onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
+              发送
+            </button>
+            <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
+              <IconClear />
+            </button>
+          </div>
         </div>
       </Show>
       <div class="fixed bottom-5 left-5 rounded-md hover:bg-slate/10 w-fit h-fit transition-colors active:scale-90" class:stick-btn-on={isStick()}>
