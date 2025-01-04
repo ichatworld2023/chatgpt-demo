@@ -49,35 +49,39 @@ export default () => {
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
-            <div class="mt-1 flex text-xs whitespace-nowrap overflow-hidden overflow-ellipsis">
-              <span>仅限单次:&nbsp;</span>
-              <Index each={info().batch1}>
-                {v => (
-                  <div class="mr-1">
-                    <Show when={v().status === '正常'}>
-                      {`${v().code} `}
-                    </Show>
-                    <Show when={v().status === '已使用'}>
-                      <span class="op-60">{`${v().code}已用 `}</span>
-                    </Show>
-                  </div>
-                )}
-              </Index>
+            <div class="mt-1 flex text-xs">
+              <span class="shrink-0">仅限单次:&nbsp;</span>
+              <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                <Index each={info().batch1}>
+                  {v => (
+                    <span class="mr-1">
+                      <Show when={v().status === '正常'}>
+                        {`${v().code} `}
+                      </Show>
+                      <Show when={v().status === '已使用'}>
+                        <span class="op-60">{`${v().code}已用 `}</span>
+                      </Show>
+                    </span>
+                  )}
+                </Index>
+              </div>
             </div>
-            <div class="mt-1 flex text-xs whitespace-nowrap overflow-hidden overflow-ellipsis">
-              <span>每日可兑:&nbsp;</span>
-              <Index each={info().batch2}>
-                {v => (
-                  <div class="mr-1">
-                    <Show when={v().status === '正常'}>
-                      {`${v().code} `}
-                    </Show>
-                    <Show when={v().status === '已使用'}>
-                      <span class="op-60">{`${v().code}已用 `}</span>
-                    </Show>
-                  </div>
-                )}
-              </Index>
+            <div class="mt-1 flex text-xs">
+              <span class="shrink-0">每日可兑:&nbsp;</span>
+              <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
+                <Index each={info().batch2}>
+                  {v => (
+                    <span class="mr-1">
+                      <Show when={v().status === '正常'}>
+                        {`${v().code} `}
+                      </Show>
+                      <Show when={v().status === '已使用'}>
+                        <span class="op-60">{`${v().code}已用 `}</span>
+                      </Show>
+                    </span>
+                  )}
+                </Index>
+              </div>
             </div>
           </div>
         </Show>
