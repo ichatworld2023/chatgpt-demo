@@ -28,7 +28,7 @@ export default defineConfig({
   transformers: [transformerVariantGroup(), transformerDirectives()],
   theme: {
     breakpoints: {
-      mobile: '375px',
+      mobile: '300px',
     },
   },
   shortcuts: [{
