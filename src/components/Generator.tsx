@@ -257,7 +257,7 @@ export default () => {
             class="gen-textarea"
           />
           <div class="flex gap-2">
-            <button class="px-4 min-w-[64px]" onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
+            <button class="px-4 min-w-[70px]" onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
               发送
             </button>
             <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>

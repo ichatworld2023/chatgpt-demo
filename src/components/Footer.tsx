@@ -54,7 +54,7 @@ export default () => {
               <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
                 <Index each={info().batch1}>
                   {v => (
-                    <span class="mr-1">
+                    <span>
                       <Show when={v().status === '正常'}>
                         {`${v().code} `}
                       </Show>
@@ -71,7 +71,7 @@ export default () => {
               <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
                 <Index each={info().batch2}>
                   {v => (
-                    <span class="mr-1">
+                    <span>
                       <Show when={v().status === '正常'}>
                         {`${v().code} `}
                       </Show>
