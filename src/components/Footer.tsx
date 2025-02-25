@@ -86,8 +86,8 @@ export default () => {
           </div>
         </Show>
 
-        <div mt-4><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.5 Sonnet </span></a></div>
-        <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div>
+        <div mt-4><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude 3.7 Sonnet 编程能力最强</span></a></div>
+{/*         <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div> */}
 
         {/*         <div mt-2 onClick={() => { copyAction('2:/⇥R06aMxvkldaJz⇤') }}>
           <div op-60>兄弟们, 拼多多帮我砍一刀</div>
