@@ -66,7 +66,7 @@ export default () => {
                 </Index>
               </div>
             </div>
-            <div class="mt-1 flex text-xs">
+            {/* <div class="mt-1 flex text-xs">
               <span class="shrink-0">每日可兑:&nbsp;</span>
               <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap text-ellipsis">
                 <Index each={info().batch2}>
@@ -82,7 +82,7 @@ export default () => {
                   )}
                 </Index>
               </div>
-            </div>
+            </div> */}
           </div>
         </Show>
 
