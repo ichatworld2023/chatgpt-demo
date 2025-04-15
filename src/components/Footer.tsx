@@ -38,14 +38,14 @@ export default () => {
     <footer>
       <div mt-6 text-xs class="block mobile:hidden">
         <div op-60>完全免费 无需登录 当日剩{ remain() }次</div>
-        <div mt-4><span class="op-60">👉 </span><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">付费使用GPT4o</a></div>
+        <div mt-4><span class="op-60">👉 </span><a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">付费使用GPT4.1</a></div>
       </div>
       <div mt-6 text-xs class="hidden mobile:block">
 
         <div op-60>完全免费 无需登录 当日剩{ remain() }次 模型: Gemini</div>
 
         <div mt-4 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
-        <div mt-4>👉 <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">3.5不够聪明? 付费使用GPT4o<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a></div>
+        <div mt-4>👉 <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">3.5不够聪明? 尝试最新GPT4.1<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a></div>
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
