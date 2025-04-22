@@ -45,7 +45,7 @@ export default () => {
         <div op-60>完全免费 无需登录 当日剩{ remain() }次 最新模型: Gemini 2.5 Flash</div>
 
         <div mt-4 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
-        <div mt-4>👉 <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">3.5不够聪明? 尝试最新GPT4.1<Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a></div>
+        <div mt-4>👉 <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">尝试OpenAI最新GPT4.1 <Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a></div>
 
         <Show when={info().is_show === 1}>
           <div op-60 mt-2>
