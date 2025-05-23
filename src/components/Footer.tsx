@@ -45,6 +45,9 @@ export default () => {
         <div op-60>完全免费 无需登录 当日剩{ remain() }次 模型: Gemini</div>
 
         <div mt-4 op-60>收藏不迷路: <a class="gpt-subtitle text-xs" href="https://nav.free2gpt.com" target="_blank" rel="noreferrer">https://nav.free2gpt.com</a>🌟</div>
+        
+        <div mt-4><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude Sonnet 4 编程能力强,最新！</span></a></div>
+        
         <div mt-4>👉 <a class=" gpt-subtitle text-xs" href="https://gpt4f.ninvfeng.xyz">尝试OpenAI最新GPT4.1 <Show when={info().is_show === 1} >, 兑换码↓↓↓ </Show></a></div>
 
         <Show when={info().is_show === 1}>
@@ -86,7 +89,6 @@ export default () => {
           </div>
         </Show>
 
-        <div mt-4><a href="https://claude.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">Claude Sonnet 4 编程能力强,最新！</span></a></div>
 {/*         <div mt-2><a href="https://o1-preview.gptnb.xyz"><span class="op-60">👉</span> <span class=" gpt-subtitle text-xs">o1-preview</span></a></div> */}
 
         {/*         <div mt-2 onClick={() => { copyAction('2:/⇥R06aMxvkldaJz⇤') }}>
